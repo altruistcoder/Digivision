@@ -47,9 +47,9 @@ Dataset for face Recognition is manually collected.
   git clone https://github.com/altruistcoder/Digivision
 ```
 5. Run the project using:
-  - run.py ![Link for run.py file](run.py) (for gTTS audio and adding names through Canvas/ python gtk)
-  - digivision.py ![Link for digivision.py file](digivision.py) (for Single face detection along with new face addition through python gtk)
-  - digivision_mul.py ![Link for digivision_mul.py file](digivision_mul.py) (for Multiface detection along with all Input/Outputs through Audio)
+  - [run.py](run.py) (for gTTS audio and adding names through Canvas/ python gtk)
+  - [digivision.py](digivision.py) (for Single face detection along with new face addition through python gtk)
+  - [digivision_mul.py](digivision_mul.py) (for Multiface detection along with all Input/Outputs through Audio)
 
  ```
  python <desired_file_name>.py
