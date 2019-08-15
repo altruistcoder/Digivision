@@ -13,13 +13,14 @@ warnings.filterwarnings("ignore")
 from pymongo import MongoClient
 
 
-MONGODB_URI = "mongodb://admin:digivision1@ds247690.mlab.com:47690/digivision"
+MONGODB_URI = "mongodb+srv://digivision:digivision@cluster0-3yht7.mongodb.net/test?retryWrites=true"
 client = MongoClient(MONGODB_URI)
-db = client.get_database("digivision")
-digi_db = db.digi_vision
+db = client.get_database("people")
+digi_db = db.trusted_people
 
 
-verification_threshhold = 0.65
+
+verification_threshhold = 0.600
 image_size = 160
 v = ftk.Verification()
 # Pre-load model for Verification
@@ -37,32 +38,15 @@ def distance(emb1, emb2):
     diff = np.subtract(emb1, emb2)
     return np.sum(np.square(diff))
 
-
-def verify(image_path, identity, database):
-
-    # Compute the encoding for the image. Use img_to_encoding()
-    encoding = img_to_encoding(image_path)
-
-    # Compute distance with identity's image
-    dist = distance(encoding, database[identity])
-
-    if dist < verification_threshhold:
-        print("It's " + str(identity) + ", welcome!")
-    else:
-        print("It's not " + str(identity) + ", please go away")
-
-    return dist
-
-
 def who_is_it(image_path):
 
-    # Step 1: Compute the target "encoding" for the image. Use img_to_encoding()
+    # Compute the target "encoding" for the image. Use img_to_encoding()
     encoding = img_to_encoding(image_path)
 
-    # Step 2: Find the closest encoding ##
+    # Find the closest encoding ##
 
-    # Initialize "min_dist" to a large value, say 100
-    min_dist = 100
+    # Initialize "min_dist" to a large value, say 1000
+    min_dist = 1000
     # Loop over the database dictionary's names and encodings.
     data = digi_db.find()
     for i in data:
