@@ -47,9 +47,9 @@ Dataset for face Recognition is manually collected.
   git clone https://github.com/altruistcoder/Digivision
 ```
 5. Run the project using:
-  - MAIN_RUN.py (for gTTS audio and dding names through Canvas/ python gtk)
+  - run.py (for gTTS audio and adding names through Canvas/ python gtk)
   - digivision.py (for Single face detection along with new face addition through python gtk)
-  - digivision2.py (for Multiface detection along with all Input/Outputs through Audio)
+  - digivision_mul.py (for Multiface detection along with all Input/Outputs through Audio)
 
  ```
  python <desired_file_name>.py
@@ -57,4 +57,7 @@ Dataset for face Recognition is manually collected.
  - It will take around 90 minutes to process all images and approx 5 minutes to process Validation images.
  - Takes around 22 minutes for a single epoch during training on batch size of 256 on NVIDIA GTX 960M.
  - Don't need to re-train data on every single run. Once trained, weights gets loaded automatically.
+
+ # Demo
+ [Click here](demo.mp4) for demo of run.py
 
