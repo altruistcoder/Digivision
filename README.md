@@ -4,7 +4,7 @@ DigiVision is a deep learning based application which is entitled to help the vi
 
 It is also capable of recognizing faces and it tells user whether a known person is present in front of him or not. If it is not a known face for the user then it gives the user a choice to set it as a known person for all future identification.
 
-![logo](images/Digivision.JPG)
+![Logo](images/Digivision.JPG)
 
 # Requirements
 * Tensorflow (>1.9)
@@ -22,8 +22,8 @@ Dataset for face Recognition is manually collected.
 
 # Features/Functions
 
-![logo](images/Digivision2.JPG)
-![logo](images/Digivision3.JPG)
+![Logo](images/Digivision2.JPG)
+![Logo](images/Digivision3.JPG)
 
 # Setup and Instructions
 
@@ -47,9 +47,9 @@ Dataset for face Recognition is manually collected.
   git clone https://github.com/altruistcoder/Digivision
 ```
 5. Run the project using:
-  - run.py (for gTTS audio and adding names through Canvas/ python gtk)
-  - digivision.py (for Single face detection along with new face addition through python gtk)
-  - digivision_mul.py (for Multiface detection along with all Input/Outputs through Audio)
+  - run.py ![Link for run.py file](run.py) (for gTTS audio and adding names through Canvas/ python gtk)
+  - digivision.py ![Link for digivision.py file](digivision.py) (for Single face detection along with new face addition through python gtk)
+  - digivision_mul.py ![Link for digivision_mul.py file](digivision_mul.py) (for Multiface detection along with all Input/Outputs through Audio)
 
  ```
  python <desired_file_name>.py
